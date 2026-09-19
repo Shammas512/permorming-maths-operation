@@ -69,7 +69,39 @@ for(auto it : divisors) cout <<it  << " ";
 return 0;
 }
 
+int checkingNumberisPrime(){
+ int n ;
+cin >> n;
+int factors = 0;
+
+
+for (int i = 1; i*i <= n; i++)
+{
+    if (n%i==0) 
+    {
+    factors ++;
+    
+    if (n/i != i) factors ++;
+    {
+        /* code */
+    }
+    
+    }
+    
+}
+if (factors==2) cout << "prime";
+else cout << "not prime";
+
+
+
+
+
+
+    
+return 0;
+}
+
 int main() {
- printDivisors();
+ checkingNumberisPrime();
  return 0;
 }
