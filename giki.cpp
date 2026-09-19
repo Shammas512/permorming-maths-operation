@@ -91,17 +91,27 @@ for (int i = 1; i*i <= n; i++)
 }
 if (factors==2) cout << "prime";
 else cout << "not prime";
-
-
-
-
-
-
-    
 return 0;
 }
 
+
+int hcf(){
+    int num1,num2;
+    cout << "Enter number 1 and number 2 " <<endl;
+    cin >> num1 >> num2;
+    while (num1!=0 && num2!=0)
+    {
+        if (num1>num2) num1= num1%num2;
+        else num2 =num2%num1;
+       
+    }
+    if (num1==0)cout << num2;
+    else cout << num1;
+   
+    
+    
+}
 int main() {
- checkingNumberisPrime();
+  hcf();
  return 0;
 }
