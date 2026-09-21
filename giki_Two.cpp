@@ -93,7 +93,27 @@ int primeRange(){
  return 0;
 }
 
+
+int lcm(int n1,int n2){
+int num1 = n1;
+int num2 = n2;
+  int leastCommon = 0;
+   while (n1!=0 && n2!=0)
+   {
+   if (n1>n2) n1= n1%n2;
+   else n2 = n2%n1;
+   }
+   if(n1==0) leastCommon = (num1/n2)*num2;
+   else leastCommon = (num2/n1)*num1;
+   
+  
+   cout << leastCommon;
+ return 0 ;
+   
+}
 int main(){
- primeRange();
+ int n1,n2;
+ cin >> n1 >>n2;
+ lcm(n1,n2);
  return 0 ;
 }
