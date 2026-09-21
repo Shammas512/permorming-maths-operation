@@ -57,7 +57,43 @@ int perfectNumber(){
     return 0 ;
   }
 
+bool isPrime(int n){
+ int factors = 0;
+  for ( int i = 1; i*i <=n; i++)
+  {
+    if (n%i==0)
+    {
+     factors ++;
+     if (n/i != i) factors ++ ;
+     
+     
+    }
+    
+  }
+  if (factors==2) return true;
+  else return false;  
+
+
+}
+
+int primeRange(){
+ vector <int> numbers;
+ int range;
+ cout << "Enter Range";
+ cin >> range;
+
+ for (int i = 1; i <= range; i++)
+ {
+    bool real = isPrime(i);
+    if(real==true) numbers.push_back(i);
+ }
+ 
+ for (auto it : numbers) cout << it  << " ";
+
+ return 0;
+}
+
 int main(){
- perfectNumber();
+ primeRange();
  return 0 ;
 }
