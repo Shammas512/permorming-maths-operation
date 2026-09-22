@@ -8,10 +8,20 @@ void swapping( vector <int> &numbers , int f,int l){
     
     }
 
+  void swappingTwo(vector<int> &numbers, int f ){
+     if(f>= (numbers.size()-f-1)) return ;
+     swap(numbers[f],numbers[numbers.size()-f-1]);
+     swappingTwo(numbers,f+1);
+    
+   }
+
 
     int main(){
-    vector <int> numbers =  {1,4,5};
-    swapping(numbers,0,numbers.size()-1);
+    vector <int> numbers =  {1,3,5,7,9};
+    swappingTwo(numbers,0);
     for (int it : numbers) cout << it  << " ";
     return 0;
     }
+
+
+ 
