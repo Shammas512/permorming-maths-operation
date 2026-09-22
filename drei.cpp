@@ -15,12 +15,18 @@ void swapping( vector <int> &numbers , int f,int l){
     
    }
 
+   bool ispalindromString(string&s , int f){
+    if (f>=s.size()/2) return true;
+    if (s[f] != s[s.size()-1-f]) return false;
+    return ispalindromString(s,f+1);
+    
+    
+   }
+
 
     int main(){
-    vector <int> numbers =  {1,3,5,7,9};
-    swappingTwo(numbers,0);
-    for (int it : numbers) cout << it  << " ";
-    return 0;
+    string s = "massam";
+     cout << ispalindromString(s,0);
     }
 
 
