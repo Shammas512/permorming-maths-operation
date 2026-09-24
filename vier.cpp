@@ -3,9 +3,35 @@
 using namespace std;
 
 
+  int mostFrequentElement(vector<int>& nums)  {
+    int n = nums.size();
+    cout << n << endl;
+    int greatest = 0;
+    int index;
+     int mx = *max_element(nums.begin(),nums.end());
+     cout << mx << endl;
+     int hash[mx + 1] = {0};
 
-int main(){
-  int n;
+     for(int i=0 ;i < n ; i++){
+        hash[nums[i]] += 1;
+     }
+      
+    for(int i = 0; i < mx +1  ; i++){
+        if(hash[i]> greatest){
+        greatest = hash[i];
+        cout << greatest << endl;
+         index = i;
+
+        }
+
+    }
+    cout << index << endl;
+    return index;
+           
+    }
+
+int hashing(){
+    int n;
   cin >> n ;
   int arr[n];
   for(int i =0 ; i<n; i ++){
@@ -31,4 +57,11 @@ int main(){
   
    }
   return 0; 
+}
+
+int main(){
+
+vector <int> numbers = {1,2,2,3,3,3};
+mostFrequentElement(numbers);
+  return 0;
 }

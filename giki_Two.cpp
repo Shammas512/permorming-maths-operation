@@ -85,35 +85,41 @@ int primeRange(){
  for (int i = 1; i <= range; i++)
  {
     bool real = isPrime(i);
-    if(real==true) numbers.push_back(i);
+    if(real==true) {
+      numbers.push_back(i);
+
+    };
  }
  
  for (auto it : numbers) cout << it  << " ";
-
- return 0;
+ int count = numbers.size();
+ cout << count ;
+ return count;
+  
 }
 
 
-int lcm(int n1,int n2){
-int num1 = n1;
-int num2 = n2;
-  int leastCommon = 0;
-   while (n1!=0 && n2!=0)
-   {
-   if (n1>n2) n1= n1%n2;
-   else n2 = n2%n1;
-   }
-   if(n1==0) leastCommon = (num1/n2)*num2;
-   else leastCommon = (num2/n1)*num1;
+// int lcm(int n1,int n2){
+// int num1 = n1;
+// int num2 = n2;
+//   int leastCommon = 0;
+//    while (n1!=0 && n2!=0)
+//    {
+//    if (n1>n2) n1= n1%n2;
+//    else n2 = n2%n1;
+//    }
+//    if(n1==0) leastCommon = (num1/n2)*num2;
+//    else leastCommon = (num2/n1)*num1;
    
   
-   cout << leastCommon;
- return 0 ;
+//    cout << leastCommon;
+//  return 0 ;
    
-}
+// }
 int main(){
- int n1,n2;
- cin >> n1 >>n2;
- lcm(n1,n2);
+//  int n1,n2;
+//  cin >> n1 >>n2;
+//  lcm(n1,n2);
+primeRange();
  return 0 ;
 }
